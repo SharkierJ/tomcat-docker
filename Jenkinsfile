@@ -1,29 +1,15 @@
 pipeline {
-    agent any
-    tools {
-        maven "MAVEN"
+    agent {
+        docker {
+            image 'maven:3.8.1-adoptopenjdk-11'
+            args '-v $HOME/.m2:/root/.m2'
+        }
     }
     stages {
-        stage('Initialize'){
-            steps{
-                echo "PATH = ${M2_HOME}/bin:${PATH}"
-                echo "M2_HOME = /opt/maven"
-            }
-        }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/demopipelinetask/tomcat-docker") {
-                sh 'mvn -B -DskipTests clean package'
-                }
+                sh 'mvn -B'
             }
         }
-     }
-    post {
-       always {
-          junit(
-        allowEmptyResults: true,
-        testResults: '*/test-reports/.xml'
-      )
-      }
-   } 
+    }
 }

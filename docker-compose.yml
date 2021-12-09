@@ -9,5 +9,5 @@ services:
     volumes:
       - ./ssl:/usr/local/tomcat/ssl
       - ./server.xml:/usr/local/tomcat/conf/server.xml
-      - ./sample.war:/usr/local/tomcat/webapps/sample.war
+      - ./webapps:/usr/local/tomcat/webapps/sample.war
       - ./logs:/usr/local/tomcat/logs  
