@@ -9,7 +9,8 @@
      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.3</version>
+        <version>3.3.2</version>
+        <type>maven-plugin</type>
 	<configuration>
 	   <warName>sample.war</warName>	
 	   <outputDirectory>./webapps</outputDirectory>
