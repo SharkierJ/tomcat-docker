@@ -4,6 +4,6 @@ COPY . .
 RUN mvn install
 
 FROM tomcat:9.0.5-jre8
-ADD ./sample.war /usr/local/tomcat/webapps/
+#ADD ./sample.war /usr/local/tomcat/webapps/
 EXPOSE 8080 8443
 CMD ["catalina.sh", "run"]
