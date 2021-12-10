@@ -1,21 +1,21 @@
 <project>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.test.app</groupId>
-  <artifactId>tomcat-docker</artifactId>
-  <version>1</version>
-  <packaging>pom</packaging>
-<build>
-   <plugins>
-     <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.2</version>
-        <type>maven-plugin</type>
-	<configuration>
-	   <warName>sample.war</warName>	
-	   <outputDirectory>./webapps</outputDirectory>
-        </configuration>
-      </plugin>
-    </plugins>
-</build>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.test.app</groupId>
+   <artifactId>tomcat-docker</artifactId>
+   <version>1</version>
+   <packaging>pom</packaging>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+            <type>maven-plugin</type>
+            <configuration>
+               <warName>sample.war</warName>
+               <outputDirectory>./webapps</outputDirectory>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
 </project>
