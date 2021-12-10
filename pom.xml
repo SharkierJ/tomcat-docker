@@ -1,7 +1,7 @@
 <project>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+  <modelVersion>1.0.0</modelVersion>
+  <groupId>com.test.app</groupId>
+  <artifactId>tomcat-docker</artifactId>
   <version>1</version>
   <packaging>pom</packaging>
 <build>
@@ -9,7 +9,7 @@
      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.1</version>
+        <version>3.3.3</version>
 	<configuration>
 	   <warName>sample.war</warName>	
 	   <outputDirectory>webapps</outputDirectory>
